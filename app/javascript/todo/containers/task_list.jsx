@@ -12,7 +12,7 @@ class TaskList extends Component {
 
   render () {
     return (
-      <div className="task-container">
+      <div>
         <TaskForm />
         <div className="task-list">
           {
