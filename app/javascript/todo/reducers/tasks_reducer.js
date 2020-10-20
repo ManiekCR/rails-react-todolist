@@ -1,4 +1,4 @@
-import { FETCH_TASKS, TASK_CREATED } from '../actions';
+import { FETCH_TASKS, TASK_CREATED, TASK_DELETED } from '../actions';
 
 export default function(state = null, action) {
   switch (action.type) {
@@ -13,6 +13,9 @@ export default function(state = null, action) {
         copiedState.push(action.payload);
         return copiedState;
       }
+    case TASK_DELETED:
+      const newState = state.filter(task => task.id !== action.id); // Use filter method to remoreove the item that has been deleted from the st
+        return newState;
     default:
       return state;
   }

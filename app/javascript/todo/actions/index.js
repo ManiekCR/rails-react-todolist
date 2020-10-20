@@ -1,5 +1,6 @@
 export const FETCH_TASKS = 'FETCH_TASKS';
 export const TASK_CREATED = 'TASK_CREATED';
+export const TASK_DELETED = 'TASK_DELETED';
 
 export function fetchTasks() {
   const url = `/api/v1/tasks`;
@@ -29,5 +30,22 @@ export function createTask(content) {
   return {
     type: TASK_CREATED,
     payload: promise // Will be resolved by redux-promise
+  };
+}
+
+export function deleteTask(id) {
+  const url = `/api/v1/tasks/${id}`;
+  const promise = fetch(url, {
+    credentials: 'same-origin',
+    method: 'DELETE',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json'
+    }
+  });
+
+  return {
+    type: TASK_DELETED,
+    id
   };
 }
