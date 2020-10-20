@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { fetchTasks } from '../actions'
 
 import TaskForm from './task_form';
+import Task from './task';
 
 class TaskList extends Component {
   componentDidMount() {
@@ -18,7 +19,7 @@ class TaskList extends Component {
           {
             this.props.tasks.map((task) => {
               return (
-                <div key={task.id}>{task.content}</div>
+                <Task key={task.id} {...task}/>
               );
             })
           }
