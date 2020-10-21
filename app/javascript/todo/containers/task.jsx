@@ -4,6 +4,11 @@ import { connect } from 'react-redux';
 import { deleteTask, fetchTasks } from '../actions'
 
 class Task extends Component {
+  handleDelete = () => {
+    if (window.confirm("Delete this task?")) {
+      this.props.deleteTask(this.props.id);
+    }
+  }
 
   render (props) {
     return (
@@ -13,7 +18,7 @@ class Task extends Component {
         {this.props.content}
         <div>
           <i className="fas fa-check"></i>
-          <i onClick={() => this.props.deleteTask(this.props.id)} className="fas fa-trash"></i>
+          <i onClick={this.handleDelete} className="fas fa-trash"></i>
         </div>
       </div>
     )

@@ -4,7 +4,7 @@ import TaskList from '../containers/task_list';
 
 const App = () => {
   return (
-    <div className="task-container">
+    <div className="container task-container">
       <TaskList />
     </div>
   );

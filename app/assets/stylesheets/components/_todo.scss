@@ -1,24 +1,17 @@
-body {
-  font-family: 'Roboto';
-}
+// // .task-container {
+// //   display: flex;
+// //   justify-content: center;
+// // }
 
-.task-container {
-  display: flex;
-  justify-content: center;
-}
+// .task-editor{
+//   padding-top: 20vh;
+//   padding-bottom: 10px;
+//   display: flex;
+// }
 
-.task-editor{
-  padding-top: 20vh;
-  padding-bottom: 10px;
-  display: flex;
-}
-
-.task-editor > button {
-  background-color: #3376D2;
-  color: white;
-  width: 150px;
-  margin-left: 5px;
-}
+// .task-editor > button {
+//   width: 50px;
+// }
 
 .task-item {
   padding: 10px 20px;
@@ -36,6 +29,7 @@ body {
   color: #3376D2;
   &:hover {
     cursor: pointer;
+    color: #046CE7;
   }
 }
 

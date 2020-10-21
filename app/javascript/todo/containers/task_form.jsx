@@ -25,17 +25,17 @@ class TaskForm extends Component {
 
   render () {
     return (
-      <form onSubmit={this.handleSubmit} className="task-editor">
+      <form onSubmit={this.handleSubmit} className="task-editor pt-5 mt-5 mb-2 d-flex">
         <input
           ref={(input) => { this.messageBox = input; }}
           type="text"
           placeholder="Add a task"
-          className="form-control"
+          className="form-control align-self-center w-50"
           autoComplete="off"
           value={this.state.value}
           onChange={this.handleChange}
         />
-        <button type="button" className="btn btn-primary" type="submit">Create task</button>
+        <button type="button" className="btn btn-primary ml-1 w-50" type="submit">Create task</button>
       </form>
     )
   }

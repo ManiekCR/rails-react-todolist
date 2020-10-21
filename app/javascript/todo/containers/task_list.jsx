@@ -13,16 +13,18 @@ class TaskList extends Component {
 
   render () {
     return (
-      <div>
-        <TaskForm />
-        <div className="task-list">
-          {
-            this.props.tasks.map((task) => {
-              return (
-                <Task key={task.id} {...task}/>
-              );
-            })
-          }
+      <div className="row d-flex justify-content-center">
+        <div className="col-12 col-md-8 col-lg-6">
+          <TaskForm />
+          <div className="task-list">
+            {
+              this.props.tasks.map((task) => {
+                return (
+                  <Task key={task.id} {...task}/>
+                );
+              })
+            }
+          </div>
         </div>
       </div>
     );
