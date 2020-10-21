@@ -36,3 +36,21 @@
 .fa-trash {
   margin-left: 10px;
 }
+
+.fa-check {
+  margin-left: 10px;
+}
+
+.task-editor {
+  padding-top: 30px;
+}
+
+@media (max-width: 575px) {
+  .fas {
+    font-size: 22px;
+  }
+
+  .fa-trash {
+    margin-left: 20px;
+  }
+}

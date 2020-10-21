@@ -13,12 +13,12 @@ class Task extends Component {
   render (props) {
     return (
       <div
-        className="task-item"
+        className="task-item d-flex space-between"
       >
-        {this.props.content}
-        <div>
-          <i className="fas fa-check"></i>
-          <i onClick={this.handleDelete} className="fas fa-trash"></i>
+        <p>{this.props.content}</p>
+        <div className="d-flex">
+          <i className="fas fa-check align-self-center"></i>
+          <i onClick={this.handleDelete} className="fas fa-trash align-self-center"></i>
         </div>
       </div>
     )

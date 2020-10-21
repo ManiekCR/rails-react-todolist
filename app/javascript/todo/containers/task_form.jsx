@@ -25,7 +25,7 @@ class TaskForm extends Component {
 
   render () {
     return (
-      <form onSubmit={this.handleSubmit} className="task-editor pt-5 mt-5 mb-2 d-flex">
+      <form onSubmit={this.handleSubmit} className="task-editor mb-2 d-flex">
         <input
           ref={(input) => { this.messageBox = input; }}
           type="text"
